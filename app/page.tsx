@@ -1,9 +1,17 @@
+'use client'
+
+import { OrderForm, OrderFormValues } from '@/components/domains/orders/Form'
 import { Banner } from '@/components/ui/banner'
 import { Card, CardContent } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+import { useToast } from '@/components/ui/use-toast'
 
 export default function Home() {
+  const { toast } = useToast()
+
+  const onFormSubmit = async (values: OrderFormValues) => {
+    toast({ title: 'Something went wrong.', variant: 'destructive' })
+  }
+
   return (
     <Card className="w-full">
       <CardContent>
@@ -21,33 +29,7 @@ export default function Home() {
                   Enter your order number and zip code to see order details and updates shipping.
                 </p>
               </div>
-              <form className="mt-8 space-y-6">
-                <div>
-                  <Label htmlFor="orderNumber">Order Number</Label>
-                  <Input
-                    id="orderNumber"
-                    placeholder="Enter the order number"
-                    className="rounded-md"
-                    required
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="zip">Zip Code</Label>
-                  <Input
-                    id="zip"
-                    placeholder="Enter recipient's zip code"
-                    className="rounded-md"
-                    required
-                  />
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    className="w-full px-4 py-3 font-bold text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700">
-                    Sign In
-                  </button>
-                </div>
-              </form>
+              <OrderForm onSubmit={onFormSubmit} />
             </div>
           </div>
         </div>
