@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={inter.className}>
         <main className="h-full bg-secondary overflow-auto">
-          <div className="mx-auto max-w-screen-xl h-full w-full flex items-center justify-center">
+          <div className="mx-auto max-w-screen-xl min-h-full w-full flex items-center justify-center">
             {children}
           </div>
         </main>

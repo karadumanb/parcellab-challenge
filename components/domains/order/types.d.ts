@@ -10,14 +10,6 @@ declare interface Order {
   zip_code: string
 }
 
-declare interface Checkpoint {
-  status_details: string
-  event_timestamp: string
-  status: string
-  country_iso3: string
-  city: string
-}
-
 declare interface DeliveryInfo {
   articles: Article[]
   orderNo: string
@@ -30,12 +22,4 @@ declare interface DeliveryInfo {
   region: string
   timezone: string
   announced_delivery_date: string
-}
-
-declare interface Article {
-  articleNo: string
-  articleName: string
-  articleImageUrl: string
-  quantity: number
-  price: number
 }
