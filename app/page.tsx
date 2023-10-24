@@ -4,17 +4,17 @@ import { OrderForm, OrderFormValues } from '@/components/domains/order/form'
 import { Banner } from '@/components/ui/banner'
 import { Card, CardContent } from '@/components/ui/card'
 import { useRouter } from 'next/navigation'
-import { useToast } from '@/components/ui/use-toast'
 
 export default function Home() {
-  const { toast } = useToast()
   const router = useRouter()
 
   const onFormSubmit = async (values: OrderFormValues) => {
-    console.log({ values })
+    const params = new URLSearchParams({
+      orderNo: values.orderNo,
+      zip_code: values.zip_code
+    })
 
-    toast({ title: 'Something went wrong.', variant: 'destructive' })
-    router.push('/order')
+    router.push(`/order?${params.toString()}`)
   }
 
   return (

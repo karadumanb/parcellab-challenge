@@ -6,7 +6,6 @@ type Props = {
 }
 
 const CheckpointAddress = ({ checkpoint }: Props) => {
-  console.log({ checkpoint })
   return (
     <div className="flex items-center space-x-2">
       <MapPinIcon />

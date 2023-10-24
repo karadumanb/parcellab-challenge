@@ -24,12 +24,7 @@ export default function OrderLayout({ children }: { children: React.ReactNode })
           </Link>
         </Button>
       </div>
-      <div
-        className={cn(
-          'items-start justify-center gap-6 rounded-lg grid lg:grid-cols-2 xl:grid-cols-3'
-        )}>
-        {children}
-      </div>
+      {children}
     </div>
   )
 }

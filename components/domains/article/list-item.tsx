@@ -9,8 +9,6 @@ type Props = {
 const ArticleListItem = ({ article }: Props) => {
   const { articleName, articleNo, articleImageUrl, price } = article
 
-  console.log({ article })
-
   return (
     <Item
       title={<h4 className="font-bold">{articleName}</h4>}
