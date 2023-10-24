@@ -3,7 +3,8 @@
 import { CheckpointAddress } from '@/components/domains/checkpoint/address'
 import { CheckpointMap } from '@/components/domains/checkpoint/map'
 import { getLastCheckPoint } from '@/components/domains/order/lib/helpers'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { OrderCard } from '../components/card'
 
 type Props = {
   order: Order
@@ -13,7 +14,7 @@ export function OrderDetails({ order }: Props) {
   const checkpoint = getLastCheckPoint(order)
 
   return (
-    <Card className="rounded-lg">
+    <OrderCard className="flex flex-col justify-between">
       <CardHeader>
         <CardTitle>{checkpoint.status}</CardTitle>
         <CardDescription>{checkpoint.status_details}</CardDescription>
@@ -27,6 +28,6 @@ export function OrderDetails({ order }: Props) {
           <CheckpointAddress checkpoint={checkpoint} />
         </CardContent>
       )}
-    </Card>
+    </OrderCard>
   )
 }

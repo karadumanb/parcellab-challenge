@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
-import { OrderDetails } from './order-details'
-import { DeliveryDetails } from './delivery-details'
-import { ArticleDetails } from './article-details'
+import { OrderDetails } from './containers/order-details'
+import { DeliveryDetails } from './containers/delivery-details'
+import { ArticleDetails } from './containers/article-details'
 import { orders } from '@/mocks'
 
 const order = orders[2]

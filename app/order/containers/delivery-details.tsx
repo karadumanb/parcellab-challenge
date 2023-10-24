@@ -2,8 +2,10 @@
 
 import { CheckpointListItem } from '@/components/domains/checkpoint/list-item'
 import { getOrderProgress } from '@/components/domains/order/lib/helpers'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { ProgressAnimated } from '@/components/ui/progress'
+
+import { OrderCard } from '../components/card'
 
 type Props = {
   order: Order
@@ -11,7 +13,7 @@ type Props = {
 
 export function DeliveryDetails({ order }: Props) {
   return (
-    <Card className="rounded-lg">
+    <OrderCard>
       <CardHeader className="space-y-5">
         <CardTitle>Shipping Updates</CardTitle>
         <div className="space-y-2">
@@ -27,6 +29,6 @@ export function DeliveryDetails({ order }: Props) {
           <CheckpointListItem checkpoint={checkpoint} />
         </CardContent>
       ))}
-    </Card>
+    </OrderCard>
   )
 }

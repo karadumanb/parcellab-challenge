@@ -2,6 +2,7 @@
 
 import { ArticleListItem } from '@/components/domains/article/list-item'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { OrderCard } from '../components/card'
 
 type Props = {
   order: Order
@@ -9,7 +10,7 @@ type Props = {
 
 export function ArticleDetails({ order }: Props) {
   return (
-    <Card className="rounded-lg">
+    <OrderCard>
       <CardHeader className="space-y-5">
         <CardTitle>Articles</CardTitle>
       </CardHeader>
@@ -18,6 +19,6 @@ export function ArticleDetails({ order }: Props) {
           <ArticleListItem article={article} />
         </CardContent>
       ))}
-    </Card>
+    </OrderCard>
   )
 }
