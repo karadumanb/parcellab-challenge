@@ -44,6 +44,7 @@ Tests are completed by jest and react testing library.
 ## Thanks for the challenge!
 
 Let me know if you need anything! Enjoy reviewing it!
+
 ![image](https://github.com/karadumanb/parcellab-challenge/assets/34961348/169d97a9-c86b-40e7-9fa3-223573cd78ee)
 
 
