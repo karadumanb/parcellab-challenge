@@ -1,5 +1,4 @@
 import { cn } from '@/lib/utils'
-import { orders } from '@/mocks'
 import { Metadata } from 'next'
 import { ArticleDetails } from './containers/article-details'
 import { DeliveryDetails } from './containers/delivery-details'
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 async function getData(query: string) {
   try {
     const res = await axios.get(`/order?${query}`)
-    return res?.data || orders[2]
+    return res?.data
   } catch (error: unknown) {
     throw (error as AxiosError)?.response?.data || 'Something went wrong'
   }
