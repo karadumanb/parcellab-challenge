@@ -32,7 +32,8 @@ The app is mobile optimized!
 
 
 ## Dependencies
-Post requests done by `axios`
+Post requests done by `axios`. If you need to check how this works with real endpoint that is shared in the challenge. You just need to update the baseUrl in folder `lib/axios.ts`
+
 Mock apis are created by `next using node`
 
 UI element created by shadcn https://ui.shadcn.com/
@@ -40,6 +41,7 @@ This is the installation of the shadcn -> https://ui.shadcn.com/docs/installatio
 
 Tailwind is heavily used for any kind of adjustment in the ui.
 Tests are completed by jest and react testing library.
+
 
 ## Thanks for the challenge!
 
