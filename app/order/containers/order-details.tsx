@@ -2,7 +2,7 @@
 
 import { CheckpointAddress } from '@/components/domains/checkpoint/address'
 import { CheckpointMap } from '@/components/domains/checkpoint/map'
-import { getLastCheckPoint } from '@/components/domains/order/lib/helpers'
+import { getLatestCheckPoint } from '@/components/domains/order/lib/helpers'
 import { CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { OrderCard } from '../components/card'
 
@@ -11,7 +11,7 @@ type Props = {
 }
 
 export function OrderDetails({ order }: Props) {
-  const checkpoint = getLastCheckPoint(order)
+  const checkpoint = getLatestCheckPoint(order)
 
   return (
     <OrderCard className="flex flex-col justify-between">

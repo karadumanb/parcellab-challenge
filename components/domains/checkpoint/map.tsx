@@ -14,7 +14,7 @@ const CheckpointMap = ({ checkpoint }: Props) => {
         <Image alt="map" src={checkpoint.meta?.pickup_address_map_url as string} fill />
       </div>
       <Button asChild className="w-full" size="lg">
-        <a href={checkpoint.meta?.pickup_address_link} target="__blank">
+        <a data-testid="map-link" href={checkpoint.meta?.pickup_address_link} target="__blank">
           Get directions
         </a>
       </Button>

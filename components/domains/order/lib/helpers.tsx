@@ -1,4 +1,4 @@
-export function getLastCheckPoint(order: Order): Checkpoint {
+export function getLatestCheckPoint(order: Order): Checkpoint {
   return order.checkpoints[0]
 }
 
