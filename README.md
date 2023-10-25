@@ -32,7 +32,7 @@ The app is mobile optimized!
 
 
 ## Dependencies
-Post requests done by `axios`. If you need to check how this works with real endpoint that is shared in the challenge. You just need to update the baseUrl in folder `lib/axios.ts`
+Post requests done by `axios`. If you need to check how this works with real endpoint that is shared in the challenge. You just need to update the baseUrl in the file `lib/axios.ts`
 
 Mock apis are created by `next using node`
 
