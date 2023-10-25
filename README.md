@@ -30,6 +30,17 @@ The app is mobile optimized!
 <img width="496" alt="Screenshot 2023-10-24 at 23 16 00" src="https://github.com/karadumanb/parcellab-challenge/assets/34961348/c6c208b4-e468-4867-942c-d12b35f7d296">
 
 
+## Testing
+
+You can check and challenge the tests running the following command.
+
+```bash
+  yarn test
+```
+
+<img width="998" alt="Screenshot 2023-10-25 at 11 55 35" src="https://github.com/karadumanb/parcellab-challenge/assets/34961348/4b170cee-396f-4e0b-b343-db671212f647">
+
+
 
 ## Dependencies
 Post requests done by `axios`. If you need to check how this works with real endpoint that is shared in the challenge. You just need to update the baseUrl in the file `lib/axios.ts`
