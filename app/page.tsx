@@ -3,18 +3,28 @@
 import { OrderForm, OrderFormValues } from '@/components/domains/order/form'
 import { Banner } from '@/components/ui/banner'
 import { Card, CardContent } from '@/components/ui/card'
+import { useToast } from '@/components/ui/use-toast'
+import { axios } from '@/lib/axios'
+import { AxiosError } from 'axios'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const router = useRouter()
+  const { toast } = useToast()
 
   const onFormSubmit = async (values: OrderFormValues) => {
-    const params = new URLSearchParams({
-      orderNo: values.orderNo,
-      zip_code: values.zip_code
-    })
+    try {
+      await axios.post('/order', values)
 
-    router.push(`/order?${params.toString()}`)
+      const params = new URLSearchParams(values)
+
+      router.push(`/order?${params.toString()}`)
+    } catch (error) {
+      toast({
+        title: ((error as AxiosError)?.response?.data as string) || 'Something went wrong.',
+        variant: 'destructive'
+      })
+    }
   }
 
   return (
